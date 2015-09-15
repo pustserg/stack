@@ -1,0 +1,16 @@
+ul.collection
+  -@mutants.each do |mutant|
+    li.collection-item
+      span.title
+        = mutant.name
+      p
+        = mutant.race
+        = link_to t('mutants.edit_mutant'),
+                  edit_mutant_path(mutant),
+                  class: 'waves-effect btn lime secondary-content'
+
+        = link_to t('mutants.delete_mutant'),
+                  mutant_path(mutant),
+                  class: 'waves-effect btn red secondary-content',
+                  method: :delete
+= link_to t('mutants.add_mutant'), new_mutant_path, class: 'waves-effect waves-light btn'

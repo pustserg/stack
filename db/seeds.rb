@@ -5,3 +5,11 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+filler = '=' * 10
+puts "#{filler} Create 20 mutants #{filler}"
+
+20.times do
+  Mutant.create(name: Faker::Name.name, race: Faker::Lorem.word)
+end
+
+puts "#{filler} #{Mutant.count} mutants created #{filler}"
