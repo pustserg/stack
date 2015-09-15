@@ -1,18 +1,14 @@
-= form_for @mutant, class: 'col s12' do |f|
-  - if @mutant.errors.any?
+= form_for @team, class: 'col s12' do |f|
+  - if @team.errors.any?
     .errors
       h2
         = t('common.invalid_form')
-      ul
-        - @mutant.errors.full_messages.each do |msg|
-          li = msg
+    ul.errors
+      - @team.errors.full_messages.each do |msg|
+        li = msg
   .row
     .input-field.col.s12
       = f.label :name
       = f.text_field :name
-
-    .input-field.col.s12
-      = f.label :race
-      = f.text_field :race
     .input-field.col.s12
       = f.submit t('common.save'), class: 'btn waves-effect waves-light'

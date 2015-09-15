@@ -1,19 +1,16 @@
 # == Schema Information
 #
-# Table name: mutants
+# Table name: teams
 #
 #  id         :integer          not null, primary key
-#  name       :string
-#  race       :string
+#  name       :string           not null
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
-#  team_id    :integer
 #
 
 FactoryGirl.define do
-  factory :mutant do
-    name Faker::Name.name
-    race Faker::Lorem.word
+  factory :team do
+    name Faker::Company.name
   end
 
 end

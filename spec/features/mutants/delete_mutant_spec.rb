@@ -2,15 +2,14 @@ require 'integration_helper'
 
 feature 'Prof can delete mutant' do
 
-  before do
-    2.times do
-      create(:mutant)
-    end
-  end
+  before { create_list(:mutant, 2) }
+
   scenario 'Prof can delete mutant' do
     visit root_path
 
-    within 'li:first-of-type' do
+    expect(Mutant.count).to eq 2
+
+    within 'li.collection-item:first-of-type' do
       click_on t('mutants.delete_mutant')
     end
 

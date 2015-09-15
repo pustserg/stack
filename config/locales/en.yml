@@ -22,8 +22,14 @@
 en:
   common:
     save: Save
+    invalid_form: Form is invalid
 
   mutants:
     add_mutant: Add mutant
     edit_mutant: Edit mutant
     delete_mutant: Delete mutant
+
+  teams:
+    add_team: Add team
+    edit_team: Edit team
+    delete_team: Delete team

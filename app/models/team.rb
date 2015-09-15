@@ -1,17 +1,14 @@
 # == Schema Information
 #
-# Table name: mutants
+# Table name: teams
 #
 #  id         :integer          not null, primary key
-#  name       :string
-#  race       :string
+#  name       :string           not null
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
-#  team_id    :integer
 #
 
-class Mutant < ActiveRecord::Base
+class Team < ActiveRecord::Base
   validates :name, presence: true
-
-  belongs_to :team
+  has_many :mutants
 end

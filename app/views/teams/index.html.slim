@@ -1,0 +1,16 @@
+ul.collection
+  - @teams.each do |team|
+    li.collection-item
+      span.title
+        = team.name
+      p
+        = link_to t('teams.edit_team'),
+                  edit_team_path(team),
+                  class: 'waves-effect btn lime secondary-content'
+
+        = link_to t('teams.delete_team'),
+                  team_path(team),
+                  class: 'waves-effect btn red secondary-content',
+                  method: :delete
+
+= link_to t('teams.add_team'), new_team_path, class: 'waves-effect waves-light btn'
