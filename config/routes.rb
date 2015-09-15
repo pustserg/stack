@@ -3,4 +3,5 @@ Rails.application.routes.draw do
 
   resources :mutants
   resources :teams
+  resources :tasks
 end

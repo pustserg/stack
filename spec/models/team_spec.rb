@@ -14,4 +14,5 @@ RSpec.describe Team, type: :model do
   it { should respond_to :name }
   it { should validate_presence_of :name }
   it { should have_many :mutants }
+  it { should have_many :tasks }
 end

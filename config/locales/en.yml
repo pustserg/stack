@@ -25,12 +25,21 @@ en:
     invalid_form: Form is invalid
 
   mutants:
+    mutants: Mutants
     add_mutant: Add mutant
     edit_mutant: Edit mutant
     delete_mutant: Delete mutant
     select_team: Select a team
 
   teams:
+    teams: Teams
     add_team: Add team
     edit_team: Edit team
     delete_team: Delete team
+
+  tasks:
+    tasks: Tasks
+    add_task: Add task
+    edit_task: Edit task
+    delete_task: Delete task
+    select_team: Select a team

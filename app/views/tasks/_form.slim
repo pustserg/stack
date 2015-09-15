@@ -1,0 +1,22 @@
+= form_for @task, class: 'col s12' do |f|
+  - if @task.errors.any?
+    .errors
+      h2
+        = t('common.invalid_form')
+    ul.errors
+      - @task.errors.full_messages.each do |msg|
+        li = msg
+  .row
+    .input-field.col.s12
+      = f.label :name
+      = f.text_field :name
+    .input-field.col.s12
+      = f.label :description
+      = f.text_area :description
+    .input-field.col.s12
+      = f.label :finished
+      = f.check_box :finished
+    .input-field
+      = f.collection_select :team_id, Team.all, :id, :name, prompt: t('tasks.select_team')
+    .input-field.col.s12
+      = f.submit t('common.save'), class: 'btn waves-effect waves-light'

@@ -1,0 +1,17 @@
+.collection.col.s12
+  - @tasks.each do |task|
+    .collection-item
+      p.title
+        = task.name
+      p
+        = task.description
+      .actions.right-align
+        = link_to t('tasks.edit_task'),
+                  edit_task_path(task),
+                  class: 'waves-effect btn lime'
+
+        = link_to t('tasks.delete_task'),
+                  task_path(task),
+                  class: 'waves-effect btn red',
+                  method: :delete
+= link_to t('tasks.add_task'), new_task_path, class: 'waves-effect waves-light btn'
