@@ -28,6 +28,7 @@ en:
     add_mutant: Add mutant
     edit_mutant: Edit mutant
     delete_mutant: Delete mutant
+    select_team: Select a team
 
   teams:
     add_team: Add team

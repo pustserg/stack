@@ -6,13 +6,17 @@
       ul
         - @mutant.errors.full_messages.each do |msg|
           li = msg
-  .row
-    .input-field.col.s12
-      = f.label :name
-      = f.text_field :name
 
-    .input-field.col.s12
-      = f.label :race
-      = f.text_field :race
-    .input-field.col.s12
-      = f.submit t('common.save'), class: 'btn waves-effect waves-light'
+  .input-field.col.s12
+    = f.label :name
+    = f.text_field :name
+
+  .input-field.col.s12
+    = f.label :race
+    = f.text_field :race
+
+  .input-field.col.s12
+    = f.collection_select :team_id, Team.all, :id, :name, prompt: t('mutants.select_team')
+
+  .input-field.col.s12
+    = f.submit t('common.save'), class: 'btn waves-effect waves-light'

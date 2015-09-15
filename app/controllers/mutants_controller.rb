@@ -38,7 +38,7 @@ class MutantsController < ApplicationController
   private
 
   def mutant_params
-    params.require(:mutant).permit(:name, :race)
+    params.require(:mutant).permit(:name, :race, :team_id)
   end
 
   def load_mutant
